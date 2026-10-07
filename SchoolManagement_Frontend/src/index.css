@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+body {
+  background-color: #f5f7fb;
+  color: #212529;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background-color: #0069d9;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================
+   TABLE ACTION BUTTONS
+========================= */
+
+/* Actions column */
+td:last-child {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* Edit button */
+td:last-child a {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+td:last-child a button {
+  background-color: #007bff;
+  margin: 0;
+}
+
+td:last-child a button:hover {
+  background-color: #0069d9;
+}
+
+/* Delete button */
+td:last-child > button {
+  display: inline-block;
+  background-color: #dc3545;
+  margin: 0;
+  vertical-align: middle;
+}
+
+td:last-child > button:hover {
+  background-color: #bb2d3b;
+}
+
+/* If delete button has marginLeft inline style */
+button[style*="marginLeft"] {
+  background-color: #dc3545 !important;
+  margin-left: 8px !important;
+}
+
+button[style*="marginLeft"]:hover {
+  background-color: #bb2d3b !important;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+select,
+textarea {
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 450px;
+  background-color: #fff;
+  transition: 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow:
+    0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* =========================
+   TABLES
+========================= */
+
+table {
+  width: 100%;
+  background-color: #fff;
+  border-collapse: collapse;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+thead {
+  background-color: #f1f3f5;
+}
+
+th {
+  background-color: #f1f3f5;
+  color: #343a40;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th,
+td {
+  padding: 12px 14px;
+  border: 1px solid #dee2e6;
+}
+
+td {
+  vertical-align: middle;
+}
+
+tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  color: #212529;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+/* =========================
+   HORIZONTAL LINE
+========================= */
+
+hr {
+  border: 0;
+  border-top: 1px solid #dee2e6;
+  margin: 20px 0;
+}
+
+/* =========================
+   SEARCH BOX
+========================= */
+
+input[placeholder*="Search"] {
+  max-width: 390px;
+  padding: 11px 14px;
+  border-radius: 7px;
+}
+
+/* =========================
+   SCROLLING TABLE
+========================= */
+
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  td:last-child {
+    white-space: nowrap;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 8px 12px;
+  }
+
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+  }
+
+  td:last-child a {
+    margin-right: 5px;
+  }
+}
